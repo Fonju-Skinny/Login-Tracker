@@ -31,7 +31,7 @@ setInterval(() => {
     const img = new Image();
     img.src = url;
     document.querySelector("#profile-pic").src = img.src
-    if (img.src === "http://127.0.0.1:5502/Main/null"){
+    if (img.src === "https://fonju-skinny.github.io/Login-Tracker/Main/null"){
       // alert("empty")
       document.querySelector("#profile-pic").src = `../Images/237Logo.png`
     }
@@ -41,7 +41,7 @@ setInterval(() => {
     let allImgPro = document.querySelectorAll("#allImgPro")
     allImgPro.forEach((allImgProALL) => {
       let imrc = img.src
-      if (img.src === "http://127.0.0.1:5502/Main/null"){
+      if (img.src === "https://fonju-skinny.github.io/Login-Tracker/Main/null"){
       // alert("empty")
       allImgProALL.src = `../Images/237Logo.png`
     }else{
