@@ -193,6 +193,7 @@ section#Accountlist{
 	align-items: center;
 	flex-direction: column;
 	gap: 1rem;
+	padding: 1rem;
 }
 .MessageLength h2{
 	color: var(--light);
