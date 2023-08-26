@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Account List 2022 with LocalStorage</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="../css/main.css" />
+	<link rel="stylesheet" href="../css/header.css" />
+	<link rel="stylesheet" href="../css/hero.css" />
+	<link rel="stylesheet" href="../css/acconts.css" />
+	<link rel="stylesheet" href="../css/AdAct.css" />
+	<link rel="stylesheet" href="../css/tabs.css" />
+	<link rel="stylesheet" href="../css/Togglers.css" />
+	<link rel="stylesheet" href="../css/Footer.css" />
+	<link rel="stylesheet" href="../css/Login.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+		rel="stylesheet">
+	<!-- End of Fonts -->
+
+	<!-- FONTAWESOME cdn  =========== -->
+	<!-- <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/> -->
+	<link rel="stylesheet" href="../css/fontawesome-free-5.15.4-web/css/all.css">
+	<link rel="stylesheet" href="../Draggable Slider Tabs/style.css">
+	<link rel="stylesheet" href="../css/section.css">
+	<link rel="stylesheet" href="./SignIn.css">
+</head>
+
+<body>
+	<!-- App Wrapper -->
+	<header id="header" class="header display">
+
+		<a onclick="opentab('Hero')" href="#Hero" class="logo display tab-links">
+			<img src="../Images/237Logo.png" alt="">
+			<span><b>Login</b> <b>Tracker</b></span>
+		</a>
+
+		<ul id="und" class="und display">
+			<li class="list">
+				<a onclick="opentab('Hero')" href="#alli" class="link tab-links active">Home</a>
+			</li>
+			<li class="list">
+				<a href="#About" class="link">About Us</a>
+			</li>
+			<li class="list">
+				<a href="#Contact" class="link">Contact Us</a>
+			</li>
+			<!-- <li class="list">
+				<a href="#Blogs" class="link">Our Blogs</a>
+			</li>
+			<li class="list">
+				<a href="#Testimonials" class="link">Testimonials</a>
+			</li>
+			<li class="list">
+				<a href="#FAQs" class="link">FAQs</a>
+			</li> -->
+		</ul>
+		<div class="togglersBtn display">
+			<span id="LiveStuffs" class="LiveStuffs display">
+				<a onclick="opentab('Accountlist')" href="#Accountlist"
+					class="Account lifeLink tab-links display">Accounts
+					<sup id="AccountsLength">0</sup> </a>
+				<a onclick="opentab('create-Account')" href="#create-Account"
+					class="Account lifeLink tab-links display"><b>+</b>Account</a>
+
+
+			</span>
+			<i id="Togglebtns" class="fas fa-chevron-left"></i>
+			<i id="ToggleNav" class="fas fa-bars"></i>
+			<i id="ToggleTheme" class="fas fa-moon"></i>
+		</div>
+
+
+
+	</header>
+
+
+
+
+	<div class="UPDN display">
+		<a style="position: fixed; z-index: 100; top: 4rem;
+		left: .2rem;" class="" href="#app">
+			<i class="fas fa-arrow-up"></i>
+			<i class="fas fa-arrow-up"></i>
+		</a>
+		<a style="position: fixed; z-index: 100; top: 6rem;
+		left: .2rem;" class="" href="#footer">
+			<i class="fas fa-arrow-down"></i>
+			<i class="fas fa-arrow-down"></i>
+
+		</a>
+
+	</div>
+
+
+
+
+	<main id="app" class="app">
+		<div id="alli" class="section main-sections">
+
+			<section id="Hero" class="tab-content active-tab heroSect display">
+				<div class="center display">
+					<div style="flex-direction: column;" class="imagep display " onclick="showProfiSetx()">
+						<img src="" alt="" id="allImgPro">
+						<p class="display">
+							Edit Profile
+						</p>
+					</div>
+					<div id="proSetx" class="proTex display">
+						<div class="profWrapper display">
+							<div class="proEnhance display">
+								
+									<img src="../Images/237Logo.png" alt="" id="profile-pic"> 
+
+								
+								<h3 id="proName">Fongang fonju boniface</h3>
+							</div>
+
+							<div class="proedit display">
+								<h2>Change your Profile</h2>
+								<input type="text" name="" id="inputname" maxlength="15" />
+								<label for="file-input-element">choose profile pic</label>
+								<input class="hide" type="file" id="file-input-element" />
+								<span onclick="UpdateProSet()" class="profilbtn">Update</span>
+								<span onclick="backProSet()" class="profilbtn"> << Back </span>
+							</div>
+						</div>
+					</div>
+					<!-- <h1>Your Login <b>Tracker</b></h1> -->
+					<!-- Greeting -->
+					<div class="greeting">
+						<h2 class="title display">
+							Welcome <b style="color: var(--primary);" id="nameResult"></b>
+						</h2>
+					</div>
+					<!-- End of Greeting -->
+					<p>Do you worry about storing all the logins you do on the internet?</p>
+					<p><b>Well today</b> we bring to you the <b>solution!!!..</b> </p>
+					<p><b>Save only 1 login in your head, and you have all your logins saved</b> </p>
+
+					<div class="btns display">
+						<a onclick="opentab('create-Account')" href="#create-Account" class="hero-btn tab-links">New
+							Login</a>
+						<a onclick="opentab('Accountlist')" href="#Accountlist" class="hero-btn tab-links">All
+							Logins</a>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- New Account -->
+			<section id="create-Account" class="tab-content create-Account display main-sections">
+				<h1 style="color: var(--primary);"></h1>
+				<br>
+				<h1>Add a new <b>login details</b></h1>
+				<div class="addtosect display">
+					<div class="instruct display">
+						<h2>How to us</h2>
+						<p>You'll follow the below intructions step by step to creating a successful login credentials.
+						</p>
+
+						<dl>
+							<ol>
+								<li>
+									<dt><b>Account Name:</b></dt>
+									<dd>Type in the name of the application you Signed Up for, in the <i>Account Name
+										</i>
+										field so as to prevent similarity issues.</dd>
+								</li>
+								<li>
+									<dt><b>Account URL:</b></dt>
+									<dd>Copy the url of the application or website you Signed Up for, and paste it in
+										the
+										<i>Account URL</i> field. This will help you to navigate to the application
+										quickly
+										from here. <b>It's Optional</b>.
+									</dd>
+								</li>
+								<li>
+									<dt><b>Account Email:</b></dt>
+									<dd>Copy the Email of the application you Signed Up for, and paste it in the
+										<i>Account
+											Email</i> field.
+									</dd>
+								</li>
+								<li>
+									<dt><b>Account Password:</b></dt>
+									<dd>Copy the Password of the application or website you Signed Up for, and paste it
+										in
+										the <i>Account Password</i> field.
+									</dd>
+								</li>
+								<li>
+									<dt><b>Pick A Category:</b></dt>
+									<dd><b>The Bussiness category</b> is for the business accounts you create on the
+										internet e.g <i>LinkedIn, Glassdoor, Instagram, Google </i> etc
+									</dd>
+									<dd><b>The Personal category</b> is for the personal accounts you create on the
+										internet.
+									</dd>
+								</li>
+								<li>
+									<dt><b>Add Account Button:</b></dt>
+									<dd>Click the add acount button to generate your account credetials <i>this button
+											will
+											take you to your logins list </i>.</dd>
+								</li>
+							</ol>
+						</dl>
+
+					</div>
+					<!-- add account form  -->
+					<form id="new-Account-form" class="display">
+						<h4>What's on your Account?</h4>
+						<div class="boxes display">
+							<div class="inputs display">
+								<div class="labels">
+									<input type="text" placeholder="Account Name" name="content" id="content" />
+									<!-- <i class="fas fa-eye-slash"></i> -->
+								</div>
+								<div class="labels">
+									<input type="text" placeholder="Account URL" name="URLs" id="URLs" />
+								</div>
+								<div class="labels display">
+									<input type="email" placeholder="Account Email" name="Email" id="Email" />
+									<i id="veiwEmail" class="fas fa-eye"></i>
+
+								</div>
+								<div class="labels display">
+									<input type="password" placeholder="Account Password" name="password"
+										id="password" />
+									<i id="veiwPassword" class="fas fa-eye"></i>
+
+								</div>
+								<!-- <div class="labels display">
+									<input type="date" name="datE" id="datE" />
+								</div> -->
+							</div>
+
+							<div class="box display">
+								<h4>Pick a category</h4>
+								<div class="options display">
+									<label>
+										<input type="radio" name="category" id="category1" value="business" />
+										<span class="bubble business"></span>
+										<div>Business</div>
+									</label>
+									<label>
+										<input type="radio" name="category" id="category2" value="personal" />
+										<span class="bubble personal"></span>
+										<div>Personal</div>
+									</label>
+								</div>
+
+								<span id="DoneLogin" class="done">Add Account</span>
+								<!-- <input type="submit" value="Add Account" /> -->
+
+								<div id="checkup" class="checkup display">
+									<div class="chechupList display">
+										<p>Your account will be saved as; </p>
+										<div class="hintput display">
+											<span>Account Name: <b id="acName"></b></span>
+											<span>Account Link: <b id="acLink"></b></span>
+											<span>Account Email: <b id="acEmail"></b></span>
+											<span>Account Password: <b id="acPassword"></b></span>
+											<!-- <span>Account Date: <b id="acDate"></b></span> -->
+										</div>
+										<p>Do you want to...</p>
+										<span class="hintBtns display">
+											<a onclick="opentab('Accountlist')" href="#Accountlist"
+												class="hero-btn tab-links">
+												<input class="btn" type="submit" value="Add Account" />
+											</a>Or
+											<span class="btn" id="EditLogin">Edit</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</section>
+			<!-- End of New Account -->
+			<!-- Account List =============== =============== -->
+			<section id="Accountlist" class="tab-content display main-sections">
+
+
+				<div class="main-wrapper">
+
+					<div class="btnsLe display">
+						<div class="plu-len">
+							<span>YOU HAVE <b id="AccountsLength">0</b> <span id="Accountsplural">Logins</span></span>
+						</div>
+						<div class="buts">
+							<button id="ClearList" class="btn">Clear All</button>
+							<a onclick="opentab('create-Account')" href="#create-Account" class="btn tab-links tab">new
+								login</a>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="Tabswrapper" class="wrapper display">
+					<i id="ShowtabsbIc" class="fas fa-chevron-left display"></i>
+
+					<ul class="tabs-box">
+
+					</ul>
+				</div>
+
+
+
+				<div class="Clearsure display" id="Clearsure">
+					<p>Are you sure you want to clear you logins list?</p>
+					<p>this will delete <b id="AccountsLength">0</b> <span id="Accountsplural">Logins</span> permanently
+					</p>
+					<div class="clearBtns display">
+						<button id="clearLogin" class="clearBtn">Yes</button>
+						<button id="clearNo" class="clearBtn">No</button>
+					</div>
+				</div>
+				<br>
+				<br>
+				<h1 style="color: var(--primary);"></h1>
+				<h1 style="color: var(--primary);"></h1>
+
+				<h3>Account LIST</h3>
+				<p>you can always edit your login details</p>
+				<div id="MessageLength" class="MessageLength">
+					<h2>your List is empty</h2>
+					<div class="butsT display">
+						<a onclick="opentab('Hero')" href="#alli" class="link tab-links active">I Don't Want</a>
+						<a onclick="opentab('create-Account')" href="#create-Account"
+							class="Account lifeLink tab-links display">New Login Detail</a>
+
+					</div>
+				</div>
+
+				<div id="Account-list" class="Account-list display"></div>
+
+
+
+
+			</section>
+		</div>
+
+		<div class="Addone" id="Addone">
+			+1 login
+		</div>
+		<div class="Minusone" id="Minusone">
+			-1 login
+		</div>
+		<div class="Clearone" id="Clearone">
+			login cleared
+		</div>
+		<!-- About Us ============== -->
+		<section class="section display main-sections" id="About">
+			<h1 class="sectheadx">About Us</h1>
+
+			<div class="blocks display">
+				<div class="bloc display">
+					<img class="giphy-embed" src="../Images/gif2.gif" alt="">
+				</div>
+				<div class="bloc display">
+					<h3>Infomation</h3>
+					<p>We are a <b>1</b> year old company with the aim of reducing the rate of losing accounts on the internet just because you lost the password or emails for Signing-In. </p>
+					<h3>About App</h3>
+					<p>Login Tracker: Is a Free web application that allows you to secure all login details of accounts you create on the internet in one place, it also allows you to copy them and use when signing in to those account. This application is simple to use, includes a whole range of features and free for all category of persons.</p>
+
+					<div class="OthApps display">
+						<!-- <a href="#Contact">Contact Us </a> -->
+						<a onclick="opentab('OtherApps')" href="#OtherApps" class="tab-links">Other Apps </a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Us =============== -->
+		<section class="section display main-sections" id="Contact">
+			<h1 class="sectheadx">Contact Us</h1>
+
+			<div class="blocks display">
+				<div class="ContBlock display">
+					<p>You don't have to worry!!! your privacy is well secured and save with us.</p>
+					<ul class="media display">
+						<h3>get in touch with us</h3>
+						<a class="display" href="tel:+237670436196">
+							<i class="fas fa-phone"></i>
+							<span>+ 237 670 436 196</span>
+						</a>
+						<a class="display" href="mailto:lockcode237@gmail.com">
+							<i class="fas fa-envelope"></i>
+							<span>lockcode237@gmail.com</span>
+						</a>
+						<a class="display" href="www.portfolio.com">
+							<i class="fas fa-globe"></i>
+							<span>www.portfolio.com</span>
+						</a>
+
+					</ul>
+					<div class="ContactSocialI">
+						<h3>follow us on social media</h3>
+						<div class="social display">
+							<a href="#" class="display">
+								<i class="fab fa-facebook"></i>
+								<p>facebook</p>
+							</a>
+							<a href="#" class="display">
+								<i class="fab fa-twitter"></i>
+								<p>twitter</p>
+							</a>
+							<a href="#" class="display">
+								<i class="fab fa-instagram"></i>
+								<p>instagram</p>
+							</a>
+							<a href="#" class="display">
+								<i class="fab fa-linkedin"></i>
+								<p>linkedin</p>
+							</a>
+							<a href="#" class="display">
+								<i class="fab fa-tiktok"></i>
+								<p>tiktok</p>
+							</a>
+							<a href="#" class="display">
+								<i class="fab fa-pinterest"></i>
+								<p>facebook</p>
+							</a>
+							<a href="#" class="display">
+								<i class="fab fa-github"></i>
+								<p>github</p>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="ContBlock display">
+					<h2>message <b>us</b></h2>
+					<form class="form display">
+						<div class="intCtr display">
+							<label for="name">name</label>
+							<input type="text">
+						</div>
+						<div class="intCtr display">
+							<label for="email">email</label>
+							<input type="email">
+						</div>
+						<div class="intCtr display">
+							<label for="subjectmessage">subject message</label>
+							<input type="text">
+						</div>
+						<div class="intCtr display">
+							<label for="message">message</label>
+							<textarea name="message"></textarea>
+						</div>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Our Blogs =============== -->
+		<!-- <section class="section display main-sections" id="Blogs">
+			<h1 class="sectheadx">Our Blogs</h1>
+			<div class="blocks"></div>
+		</section> -->
+
+		<!-- Testimonials =============== -->
+		<!-- <section class="section display main-sections" id="Testimonials">
+			<h1 class="sectheadx">Our Testimonials</h1>
+			<div class="blocks"></div>
+
+		</section> -->
+
+		<!-- FAQs =============== -->
+		<!-- <section class="section display main-sections" id="FAQs">
+			<h1 class="sectheadx">FAQs</h1>
+			<div class="blocks"></div>
+		</section> -->
+
+		<!-- Footer =============== -->
+		<footer class=" display main-sections" id="footer">
+			<h3>Follow Us On Social Media:</h3>
+			<div class="social display">
+				<a href="#" class="display">
+					<i class="fab fa-facebook"></i>
+					<p>facebook</p>
+				</a>
+				<a href="#" class="display">
+					<i class="fab fa-twitter"></i>
+					<p>twitter</p>
+				</a>
+				<a href="#" class="display">
+					<i class="fab fa-instagram"></i>
+					<p>instagram</p>
+				</a>
+				<a href="#" class="display">
+					<i class="fab fa-linkedin"></i>
+					<p>linkedin</p>
+				</a>
+				<a href="#" class="display">
+					<i class="fab fa-tiktok"></i>
+					<p>tiktok</p>
+				</a>
+				<a href="#" class="display">
+					<i class="fab fa-pinterest"></i>
+					<p>facebook</p>
+				</a>
+				<a href="#" class="display">
+					<i class="fab fa-github"></i>
+					<p>github</p>
+				</a>
+			</div>
+			<h3 class="H3re">Quick Navigation Tabs</h3>
+			<div class="blocks display">
+				<a onclick="opentab('Accountlist')" href="#Accountlist"
+					class="link tab-links tab-links display">Accounts
+					<sup id="AccountsLength">0</sup>
+				</a>
+
+
+				<!-- <a onclick="opentab('Login')" href="#Login" class="link tab-links tab-links display">Login In</a> -->
+
+				<a onclick="opentab('create-Account')" href="#create-Account"
+					class="Account lifeLink tab-links display">New Login Detail
+				</a>
+
+				<a onclick="opentab('Hero')" href="#alli" class="link tab-links">Home</a>
+
+
+				<a href="#About" class="link tab-links">About Us</a>
+
+				<a href="#Contact" class="link tab-links">Contact Us</a>
+
+			</div>
+			<span class="FooterSpan"><i class="fas fa-copyright"></i>All Rights Reserved 2023, <b>LockCode >>
+					VectorCode, Main Brain </b>
+				On 05/08/23 <b>Fongang Fonju Boniaface</b></span>
+		</footer>
+
+
+	</main>
+	<!-- End of App Wrapper -->
+	<!-- <h5 id="nameResult"></h5> -->
+	<!-- JS Import -->
+	<!-- <script src="./js/account.js"></script> -->
+	<script src="../js/section.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/tabs.js"></script>
+	<script src="../js/Togglers.js"></script>
+	<script src="../js/js.js"></script>
+	<script src="../js/profile.js"></script>
+	<script src="../Draggable Slider Tabs/script.js"></script>
+	<script>
+		document.getElementById("nameResult").innerHTML = localStorage.getItem("nameValue");
+	</script>
+	<!-- End of JS Import -->
+</body>
+
+</html>

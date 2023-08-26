@@ -1,0 +1,47 @@
+/* Variables */
+:root {
+	--bg-background:#fff;
+	--primary: #EA40A4;
+	--business: #3a82ee;
+	--personal: var(--primary);
+	--light: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--danger: #ff5b57;
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	--border-radius:.3rem;
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+
+/* End of Variables */
+
+/* theme and nav toggler icons ===================  */
+#ToggleTheme, #ToggleNav, #Togglebtns{
+	background: var(--primary);
+	font-size: 1.1rem;
+	padding: .3rem;
+	color: #fff;
+	border-radius:var(--border-radius);
+	
+}
+#ToggleTheme:hover, #ToggleNav:hover, #Togglebtns:hover{
+	color: var(--primary);
+	background: var(--dark);
+}
+#ToggleNav, #Togglebtns{
+	display: none;
+}
+
+@media screen and (max-width: 1150px) {
+	#ToggleNav{
+	  display: flex;
+	}
+  }
+
+  @media screen and (max-width: 700px) {
+	#Togglebtns{
+		display: flex;
+	  }
+  }

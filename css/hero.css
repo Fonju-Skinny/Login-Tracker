@@ -1,0 +1,215 @@
+/* Variables */
+:root {
+	--bg-background:#fff;
+	--primary: #EA40A4;
+	--business: #3a82ee;
+	--personal: var(--primary);
+	--light: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--danger: #ff5b57;
+	--shadow: 0 1px 3px #0000001a;
+	--border-radius:.3rem;
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+
+/* End of Variables */
+
+.heroSect, .heroSect .center{
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+	user-select: none;
+
+}
+.heroSect .center{
+    gap: .3rem;
+}
+.heroSect .center .imagep{
+    margin-bottom: 1rem;
+    width: 150px;
+    height: 150px;
+    background: var(--bg-background);
+    border-radius: 100%;
+    padding: .5rem;
+    overflow: hidden;
+    position: relative;
+}
+.heroSect .center .imagep p {
+
+    position: absolute;
+    z-index:1;
+    background: linear-gradient(#3131545e,  #313154 40% );
+    color: var(--bg-background);
+    bottom:0;
+    height: 30%;
+    font-size: 1rem;
+    width: 100%;
+}
+/* .heroSect .center .imagep:hover p {
+    bottom: 0;
+} */
+
+.heroSect .center .imagep img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+
+}
+.heroSect .center .proTex{
+    width: 100%;
+    min-height: calc(100vh - 3rem);
+    position: fixed;
+    top: -100vh;
+    z-index: 1;
+    right: 0;
+    padding: 1rem;
+    padding-top: 3rem;
+    background: var(--dark);
+    
+}
+.heroSect .center .proTex.active{
+    
+    top: 3rem;
+}
+.heroSect .center .proTex .profWrapper{
+    flex-direction: column;
+    min-height: 30vh;
+    background: var(--bg-background);
+    padding: 2rem 1rem;
+    border-radius:.3rem;
+    position: relative;
+}
+
+.heroSect .center .proTex .profWrapper .proEnhance{
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--dark);
+    border-radius:.3rem;
+    height: fit-content;
+    padding: 0 1rem;
+    position: absolute;
+    top: -45%;
+    max-width: 200px;
+}
+.heroSect .center .proTex .profWrapper .proEnhance img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+.heroSect .center .proTex .profWrapper .proEnhance h3{
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+
+.heroSect .center .proTex .profWrapper .proedit h2{
+    margin-top: 40px;
+}
+.heroSect .center .proTex .profWrapper .proedit{
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    
+}
+.heroSect .center .proTex .profWrapper .proedit input, .heroSect .center .proTex .profWrapper .proedit label, .heroSect .center .proTex .profWrapper .proedit span{
+    width: 100%;
+    border: .1rem solid var(--dark);
+    font-size: larger;
+    color: var(--dark);
+    padding: .3rem .5rem;
+    border-radius: .3rem;
+    font-weight: 600;
+}
+.heroSect .center .proTex .profWrapper .proedit label, .heroSect .center .proTex .profWrapper .proedit span{
+    background: var(--dark);
+    color: var(--bg-background);
+}
+.heroSect .center .proTex .profWrapper .proedit label:hover{
+    color: var(--primary);
+}
+.heroSect .center .proTex .profWrapper .proedit span:hover{
+    background: var(--primary);
+}
+
+.heroSect .center .proTex .profWrapper .proedit input.hide{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+.heroSect .center h1, h1.sectheadx{
+    margin: .5rem 0;
+    padding: .3rem;
+    color: var(--grey);
+    border-radius: var(--border-radius);
+    border-bottom: .3rem solid var(--primary);
+    border-left: .3rem solid var(--primary);
+    text-transform: uppercase;
+
+}
+.heroSect .center h1 b{
+    color: var(--dark);
+}
+
+
+/* Greetings css ===================== */
+
+.greeting .title {
+	/* display: flex; */
+    gap: .3rem;
+}
+
+.greeting .title input {
+	/* background: red; */
+    width: fit-content;
+	border-radius: var(--border-radius);
+    max-width: 10rem;
+    padding: .2rem 0;
+    color: var(--primary);
+    text-transform: capitalize;
+}
+
+.greeting .title, 
+.greeting .title input {
+	/* color: var(--dark); */
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+
+
+.heroSect .center p{
+    font-size: 1.2rem;
+}
+.heroSect .center p b{
+    color: var(--primary);
+}
+.heroSect .center .btns .hero-btn{
+    background: var(--primary);
+    color: #fff;
+    outline:.2rem solid var(--primary);
+    border-radius: var(--border-radius);
+    padding: .3rem .5rem;
+    font-size: 1.2rem;
+    margin: 1rem;
+    opacity: .7;
+}
+.heroSect .center .btns{
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.heroSect .center .btns .hero-btn:hover{
+    /* background: none; */
+    opacity: 1;
+    
+}

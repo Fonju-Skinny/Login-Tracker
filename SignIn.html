@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todo List 2022 with LocalStorage</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="./SignIn.css" />
+	<!-- End of CSS Import -->
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	<!-- End of Fonts -->
+</head>
+<body>
+	<!-- App Wrapper -->
+	<main class="app display">
+
+		<section id="createlogin" class="create-login">
+			<form action="main.html" id="new-LoginForm" class="display">
+				<h3>SIGN UP</h3>
+				<div class="sides display">
+
+					<div class="side">
+						<input type="text" placeholder="e.g. Fonju Boniface"name="contentLogin"id="contentLogin" maxlength="15" />
+	
+					<input type="email" placeholder="e.g. Name@gmail.com"name="Email"id="EmailLogin" />
+	
+					<input type="password" placeholder="Password" name="Password" id="PassWordLogin" />
+	
+					<input type="password" placeholder="Confirm Password" name="ConPassword" id="ConfirmPassWordLogin">
+	
+					</div>
+					
+					<div class="side">
+						<p>Write anything you haven't told anyone and you'll never want to tell anyone. <b>Please take into consideration your; spellings, punctuations and text format. </b> This will help to recover your account. <b>It's our little secrete.</b> </p>
+						<textarea name="Story" id="Story" placeholder="Write here"></textarea>
+						
+						<div id="FormCreateBtn">
+							
+							<input type="submit" value="Create Account" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+
+		<section id="recoverLogin" class="create-login">
+			<form action="main.html" id="recoverForm">
+				<h1>Recover Password</h1>
+				<div class="sides display">
+					
+					<div class="side">
+						<p>Do you remember our secrete? Write it again please don't miss out a spelling, punctuation and text format where needed. </p>
+						<textarea name="StoryGet" id="StoryGet" placeholder="Write here"></textarea>
+						
+						<div id="rec">
+							
+							<input type="submit" value="Recorver Account" />
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+		
+
+		
+		<form id="form" class="SinCkeck display">
+			<h3>SignIn</h3>
+			<!-- <input style="color: #ffff; border-radius: .6rem; font-size: 1.4rem; padding: .5rem 1rem; background: black;" type="text" placeholder="NAME HERE...." id="NewName"> -->
+
+			<input style="color: #ffff; border-radius: .6rem; font-size: 1.4rem; padding: .5rem 1rem; background: black;" type="email" placeholder="Email here...." id="NewEmailLogin">
+
+			<input style="color: #ffff; border-radius: .6rem; font-size: 1.4rem; padding: .5rem 1rem; background: black;" type="password" placeholder="Password here...." id="NewPasswordLogin">
+			<b id="Recorver">Forgot Password? <b>Recorver password</b></b>
+
+			<div  id="SignInBtn">
+				<button type="submit" style="color: black; font-size: 1rem; padding: .3rem 1rem; background: #ffff;">SignIn</button>
+			</div>
+		</form>
+		
+		
+		<div id="succesSignIn" class="succesSignIn display">
+			<h5 id="UseName"></h5>
+			<h3>You have successfully signed in to your accone</h3>
+			<a style="color: black; font-size: 1rem; padding: .3rem 1rem; background: #ffff;" href="./Main/index.html">Okay</a>
+		</div>
+	</main>
+
+	<!-- JS Import -->
+	<script src="./SignIn.js"></script>
+	<!-- End of JS Import -->
+</body>
+</html>

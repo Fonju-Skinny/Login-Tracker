@@ -1,0 +1,174 @@
+/* Variables */
+:root {
+	--primary: #EA40A4;
+	--business: #3a82ee;
+	--personal: var(--primary);
+	--light: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--danger: #ff5b57;
+
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+/* End of Variables */
+
+/* Resets */
+* {
+	margin: 0;
+	padding: 0;
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+	box-sizing: border-box;
+	font-family: 'montserrat', sans-serif;
+	transition: .3s;
+}
+
+/* End of Resets */
+
+body {
+	background: var(--light);
+	color: var(--dark);
+	
+}
+main.app{
+	width: 100%;
+	min-height: 100vh;
+	width: 100%;
+	padding: 1rem;
+
+}
+
+h3 {
+	color: var(--dark);
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 0.5rem;
+}
+#new-LoginForm h3 {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+
+.display{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+#new-LoginForm{
+	flex-direction: column;
+	
+	gap: .5rem;
+}
+.sides{
+	gap: 3rem;
+	flex-wrap: wrap;
+}
+.sides .side{
+	width: 20rem;
+}
+.sides .side p{
+	margin-bottom: 1rem;
+}
+.create-login input[type="text"]{
+	text-transform: capitalize;
+}
+.create-login input[type="text"], .create-login input[type="email"], .create-login input[type="password"], textarea {
+	display: block;
+	resize: none;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: var(--dark);
+	background: #FFF;
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: 1.5rem;
+}
+
+.create-login input[type="submit"] {
+	display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: #FFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: var(--primary);
+	box-shadow: var(--personal-glow);
+	cursor: pointer;
+	transition: 0.2s ease-out;
+}
+
+.create-login input[type="submit"]:hover {
+	opacity: 0.75;
+}
+#SignInBtn{
+	border-radius: 0.5rem;
+	overflow: hidden;
+	position: relative;
+	
+}
+#SignInBtn::before{
+	content: '';
+	background: rgba(40, 1, 40, 0.553);
+	position: absolute;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+#SignInBtn.activeSign::before{
+	left: 0;
+}
+#FormCreateBtn{
+	border-radius: 0.5rem;
+	overflow: hidden;
+	position: relative;
+	
+}
+#FormCreateBtn::before{
+	content: '';
+	background: rgba(40, 1, 40, 0.553);
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+#FormCreateBtn.activeFormCreateBtn::before{
+	left: -100%;
+}
+
+.SinCkeck{
+	flex-direction: column;
+}
+
+
+.succesSignIn{
+	flex-direction: column;
+	display: none;
+}
+.succesSignIn.ActivesuccesSignIn{
+	display: flex;
+}
+
+#form.SinCkeck{
+	width: 20rem;
+}
+#form.SinCkeck input{
+	width: 100%;
+}
+
+@media screen and (max-width:350px) {
+	.sides .side{
+		width: 100%;
+	}
+}

@@ -1,0 +1,162 @@
+/* Variables */
+:root {
+	--bg-background:#fff;
+	--primary: #EA40A4;
+	--business: #3a82ee;
+	--personal: var(--primary);
+	--light: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--danger: #ff5b57;
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	--border-radius:.3rem;
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+/* End of Variables */
+
+/* header css ============ */
+.header{
+	justify-content: space-between;
+	background: var(--bg-background);
+	height: 3rem;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding:0 .5rem;
+	z-index: 10000;
+	/* overflow: hidden; */
+}
+/* header logo ------ */
+.header a.logo{
+	color: var(--dark);
+	font-size: 1.3rem;
+	border-radius: var(--border-radius);
+	padding: .2rem .5rem;
+}
+
+.header a.logo img{
+	width: 2.5rem;
+}
+.header a.logo b:last-child{
+	color: var(--primary);
+}
+/* .header a.logo:hover b:first-child{
+	color: var(--danger);
+} */
+.header a.logo:hover{
+	color: var(--primary);
+	background: var(--dark);
+}
+/* header accounts =========== */
+.header .LiveStuffs{
+	/* background: red; */
+	margin: 0;
+}
+.header .LiveStuffs a {
+	color:#fff;
+	padding: .3rem .5rem;
+	background: var(--primary);
+	border-radius: var(--border-radius);
+}
+.header .LiveStuffs a:hover{
+	color: var(--primary);
+	background: var(--dark);
+}
+.header .LiveStuffs a.active-link{
+	color: #fff;
+	background: purple;
+}
+ .header .LiveStuffs a:hover sup{
+	color: var(--primary);
+
+}
+.header .LiveStuffs a:hover b{
+	color: var(--primary);
+
+}
+
+/* header btns =========== */
+.und {
+	gap: .2rem;
+	list-style: none;
+}
+.und .list a.link{
+	color: var(--grey);
+	padding: .3rem .5rem;
+}
+.und .list a.link:hover, .und .list a.active{
+	background: purple;
+	color: #fff;
+	border-radius: var(--border-radius);
+}
+
+.Clearsure{
+	z-index: 100000;
+
+}
+/* ToggleNav */
+
+.UPDN{
+    /* gap: 1rem;
+    position: relative;
+    /* z-index: -1; */
+	gap: .3rem;
+	width: 100%;
+	justify-content: space-between;
+	padding: 0 .3rem;
+	background: none;
+}
+.UPDN a{
+    flex-direction: column;
+    background: var(--primary);
+    gap: 0;
+    /* transform: rotate(90deg); */
+    padding: 0;
+    border-radius: .5rem;
+    
+}
+.UPDN a i:hover{
+    animation: none;
+}
+.UPDN a i:first-child{
+    animation: spa1 1s linear infinite alternate-reverse;
+    background: var(--primary);
+    position: relative;
+    padding: .1rem .05rem;
+    font-size: .8rem;
+    color:#fff;
+    border-radius: .5rem;
+}
+@keyframes spa1 {
+    0%{
+        bottom: -.5rem;
+    }
+    100%{
+        bottom: .5rem;
+    }
+}
+.UPDN a i:last-child{
+    animation: spa2 1s linear infinite alternate-reverse;
+    background: var(--primary);
+    position: relative;
+	padding: .1rem .05rem;
+    font-size: .8rem;
+    color: #fff;
+    border-radius: .5rem;
+}
+@keyframes spa2 {
+    0%{
+        top: -.5rem;
+    }
+    100%{
+        top: .5rem;
+    }
+}
+
+.UPDN a:hover i{
+    animation: none;
+}
+
+

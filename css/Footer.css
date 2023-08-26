@@ -1,0 +1,62 @@
+/* Variables */
+:root {
+	--bg-background:#fff;
+	--primary: #EA40A4;
+	--business: #3a82ee;
+	--personal: var(--primary);
+	--light: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--danger: #ff5b57;
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	--border-radius:.3rem;
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+
+
+
+
+
+
+
+
+footer{
+    flex-direction: column;
+    border-top: .2rem solid var(--dark);
+    padding: 1rem;
+    padding-top: 2rem;
+    width: 100%;
+}
+footer .blocks{
+    flex-wrap: wrap;
+}
+footer h3.H3re{
+    margin-top: 1rem;
+
+}
+footer .blocks a{
+    color: var(--dark);
+    padding: .3rem 1rem;
+    background:var(--primary);
+}
+footer .blocks a:hover{
+    background: var(--primary);
+    color: var(--light);
+}
+footer .FooterSpan{
+    color: var(--grey);
+}
+footer .FooterSpan i, footer .FooterSpan b{
+    color: var(--primary);
+} 
+
+#SignUpForm{
+    background: red;
+    color: white;
+    
+}
+#SignUpForm input{
+    background: #EA40A4;
+}

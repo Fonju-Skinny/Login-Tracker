@@ -1,0 +1,350 @@
+/* Variables */
+:root {
+	--bg-background:#fff;
+	--primary: #EA40A4;
+	--business: #3a82ee;
+	--personal: var(--primary);
+	--light: #EEE;
+	--grey: #888;
+	--dark: #313154;
+	--danger: #ff5b57;
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	--border-radius:.3rem;
+	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+/* End of Variables */
+
+
+.create-Account{
+	flex-direction: column;
+}
+#Accountlist p, .btnsLe{
+	user-select: none;
+}
+h1 b{
+	color: var(--primary);
+	user-select: none;
+}
+.create-Account h1, #Accountlist h3{
+	border-bottom: .2rem solid var(--primary);
+	border-left: .2rem solid var(--primary);
+	padding: .2rem;
+	margin-bottom: 1rem;
+	user-select: none;
+}
+#Accountlist h3{
+	font-size: 1.4rem;
+}
+dl ol{
+	list-style: decimal;
+	user-select: none;
+}
+dl ol li{
+	margin: .3rem 0;
+	line-height: 1.5rem;
+}
+dl ol li dt b{
+	color: var(--primary);
+}
+dl ol li dd i{
+	background: var(--bg-background);
+	opacity: .7;
+}
+dl ol li dd b{
+	color: var(--dark);
+	font-weight: 700;
+}
+.create-Account .addtosect{
+	gap: 1rem;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
+}
+.create-Account .addtosect .instruct{
+	flex-direction: column;
+	gap: 1.5rem;
+	align-items: flex-start;
+	max-width: 45rem;
+}
+.create-Account .addtosect .instruct h2{
+	padding-bottom: .3rem;
+	font-size: 1.2rem;
+	color: var(--primary);
+	border-bottom: .1rem solid var(--primary);
+}
+.create-Account .labels {
+	width: 100%;
+}
+.create-Account input[type="text"], .create-Account input[type="email"], .create-Account input[type="password"], .create-Account .labels input[type="date"] {
+	display: block;
+	width: 100%;
+	font-size: 1.1rem;
+	padding: 1rem 1rem;
+	color: var(--dark);
+	background: var(--bg-background);
+	border-radius: 0.5rem;
+	box-shadow: var(--shadow);
+	margin-bottom: .5rem;
+	border: .1rem solid var(--bg-background);
+}
+form#new-Account-form{
+	justify-content: center;
+	flex-direction: column;
+}
+form#new-Account-form h4{
+	font-size: 1.2rem;
+	color: var(--primary);
+}
+form#new-Account-form .boxes{
+	/* flex-direction: column; */
+	width: 100%;
+	flex-wrap: wrap;
+	
+}
+form#new-Account-form .boxes .box{
+	flex-direction: column;
+	/* background: red; */
+	
+}
+form#new-Account-form .boxes .box h4{
+	font-size: 1rem;
+}
+form#new-Account-form .boxes .inputs{
+	flex-direction: column;
+	
+}
+form#new-Account-form .boxes .inputs .labels{
+	position: relative;
+}
+form#new-Account-form .boxes .inputs .labels i{
+	position: absolute;
+	right: .5rem;
+	color: var(--primary);
+}
+form#new-Account-form .boxes .inputs .labels i:hover{
+	color: var(--dark);
+}
+
+.create-Account .options {
+	flex-wrap: wrap;
+	/* background: pink; */
+	padding: .5rem ;
+	margin-bottom: 1.5rem;
+	width: 100%;
+}
+
+.create-Account .options label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--bg-background);
+	/* background: purple; */
+	padding:1.5rem;
+	box-shadow: var(--shadow);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	/* background: red; */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+.bubble {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 999px;
+	border: 2px solid var(--business);
+	box-shadow: var(--business-glow);
+}
+
+.bubble.personal {
+	border-color: var(--personal);
+	box-shadow: var(--personal-glow);
+}
+
+.bubble::after {
+	content: '';
+	display: block;
+	opacity: 0;
+	width: 0px;
+	height: 0px;
+	background-color: var(--business);
+	box-shadow: var(--business-glow);
+	border-radius: 999px;
+	transition: 0.2s ease-in-out;
+}
+input[type="email"]{
+	text-transform: lowercase;
+}
+.bubble.personal::after {
+	background-color: var(--personal);
+	box-shadow: var(--personal-glow);
+}
+
+input:checked ~ .bubble::after {
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+.create-Account .options label div {
+	color: var(--dark);
+	font-size: 1.125rem;
+	margin-top: 1rem;
+}
+
+.create-Account span.done {
+	display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: var(--primary);
+	box-shadow: var(--personal-glow);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: 0.2s ease-out;
+	text-align: center;
+	opacity: 0.7;
+}
+
+.create-Account span.done:hover {
+	opacity: 1;
+}
+
+.checkup, .Clearsure{
+	flex-direction: column;
+	/* max-width: 30rem; */
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: var(--bg-background);
+	height: 100vh;
+	width: 100vw;
+	padding: 1rem;
+	display: none;
+	/* transition: 2s ease-in-out; */
+	user-select: none;
+	z-index: 10000;
+}
+.checkupActive, .ClearsureActive{
+	display: flex;
+	/* opacity: 1; */
+	animation: ShowCheckup 1s ;
+	animation-fill-mode: forwards;
+}
+@keyframes ShowCheckup {
+	0%{
+		opacity: 0;
+	}
+	
+	100%{
+		opacity: 1;
+	}
+}
+.chechupList{
+	max-width: 30rem;
+	flex-direction: column;
+	align-items: flex-start;
+	color: var(--dark);
+	/* gap: 2rem; */
+}
+.checkup .chechupList p{
+	color: var(--primary);
+	font-size: 1.3rem;
+	
+	
+}
+.checkup .chechupList p:first-child{
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+.checkup .chechupList .hintput{
+	flex-direction: column;
+	align-items: flex-start;
+}
+.checkup .chechupList .hintput span b{
+	color: var(--primary);
+}
+.checkup .chechupList .hintBtns{
+	flex-wrap: wrap;
+}
+.checkup .chechupList .hintBtns .btn{
+	padding: .5rem 1rem;
+	font-size: 1.1rem;
+	color:#fff;
+	background: var(--primary);
+	border-radius: .5rem;
+	cursor: pointer;
+}
+.checkup .chechupList .hintBtns .btn:hover{
+	background: purple;
+	outline: .1rem solid var(--primary);
+}
+
+
+.Addone, .Minusone, .Clearone{
+	position: fixed;
+	top: .5rem;
+	/* left: 0; */
+	z-index: 1000000;
+	padding: .3rem 1rem;
+	background: var(--dark);
+	color: var(--primary);
+	font-size: x-large;
+	border-radius: .5rem;
+	opacity: 0;
+	transform: scale(0);
+	/* display: none; */
+}
+.Addone.AddoneActive, .Minusone.MinusoneActive, .Clearone.ClearoneActive{
+	opacity: 1;
+	transform: scale(1);
+	
+}
+
+.Clearsure p{
+	color: var(--dark);
+}
+.Clearsure p b{ 
+	color: var(--primary);
+}
+.Clearsure .clearBtns{
+	flex-wrap: wrap;
+}
+.Clearsure .clearBtns .clearBtn{
+	padding: .3rem 1rem;
+	font-size: 1.1rem;
+	background: var(--primary);
+	color: #fff;
+	outline: .1rem solid var(--primary);
+	border-radius: .3rem;
+	opacity: .7;
+}
+.Clearsure .clearBtns .clearBtn:hover{
+	opacity: 1;
+}
+
+/* .Clearsure{ */
+@media screen and (max-width: 584px) {
+	form#new-Account-form .boxes .box{
+		width:100%;
+	}
+	form#new-Account-form .boxes .inputs{
+		width:100%;
+	}
+}
+@media screen and (max-width: 325px) {
+	.create-Account .options label{
+		width: 100%;
+	}
+}
