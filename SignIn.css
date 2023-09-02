@@ -114,6 +114,11 @@ h3 {
 	border-radius: 0.5rem;
 	overflow: hidden;
 	position: relative;
+	width: 100%;
+	
+}
+#SignInBtn .btn{
+	width: 100%;
 	
 }
 #SignInBtn::before{
@@ -134,7 +139,7 @@ h3 {
 	position: relative;
 	
 }
-#FormCreateBtn::before{
+#FormCreateBtn.btn::before{
 	content: '';
 	background: rgba(40, 1, 40, 0.553);
 	position: absolute;
@@ -166,7 +171,19 @@ h3 {
 #form.SinCkeck input{
 	width: 100%;
 }
-
+.btn{
+	color: black; 
+	font-size: 1.1rem; 
+	padding: .5rem 1rem; 
+	background: #ffff;
+	border-radius: 0.5rem;
+	width: 100%;
+	text-align: center;
+}
+.btn:hover{
+	background: black; 
+	color: #ffff;
+}
 @media screen and (max-width:350px) {
 	.sides .side{
 		width: 100%;

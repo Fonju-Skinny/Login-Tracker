@@ -102,6 +102,27 @@
 	</div>
 
 
+	
+	<div class="deleteHistry display">
+		<div id="DeleteAccbox" class="box display">
+			<h2>Are you sure you want to delete you accont? <br> This action will wipe up <b
+					id="AccountsLength">0</b> Logins and your profile.</h2><br>
+			<b>okay I will;</b>
+			<div class="btns display">
+				<div id="gobacktoHome" class="btn">Go back</div>
+				<div id="ClearACCMainBtn" class="btn">Clear Account</div>
+			</div>
+		</div>
+	
+		<div id="DeletACSuccess" class="box display">
+			Your Account has been cleared successfully.
+			<div class="btns">
+
+				<a class="btn" href="../index.html">Perfect</a>
+			</div>
+		</div>
+	</div>
+
 
 
 	<main id="app" class="app">
@@ -118,10 +139,10 @@
 					<div id="proSetx" class="proTex display">
 						<div class="profWrapper display">
 							<div class="proEnhance display">
-								
-									<img src="../Images/237Logo.png" alt="" id="profile-pic"> 
 
-								
+								<img src="../Images/237Logo.png" alt="" id="profile-pic">
+
+
 								<h3 id="proName">Fongang fonju boniface</h3>
 							</div>
 
@@ -131,10 +152,15 @@
 								<label for="file-input-element">choose profile pic</label>
 								<input class="hide" type="file" id="file-input-element" />
 								<span onclick="UpdateProSet()" class="profilbtn">Update</span>
-								<span onclick="backProSet()" class="profilbtn"> << Back </span>
+								<span onclick="backProSet()" class="profilbtn"><< Back </span>
+								<span onclick="deleteACount()" class="profilbtn">Delete Account </span>
 							</div>
+
 						</div>
 					</div>
+
+
+
 					<!-- <h1>Your Login <b>Tracker</b></h1> -->
 					<!-- Greeting -->
 					<div class="greeting">
@@ -373,9 +399,13 @@
 				</div>
 				<div class="bloc display">
 					<h3>Infomation</h3>
-					<p>We are a <b>1</b> year old company with the aim of reducing the rate of losing accounts on the internet just because you lost the password or emails for Signing-In. </p>
+					<p>We are a <b>1</b> year old company with the aim of reducing the rate of losing accounts on the
+						internet just because you lost the password or emails for Signing-In. </p>
 					<h3>About App</h3>
-					<p>Login Tracker: Is a Free web application that allows you to secure all login details of accounts you create on the internet in one place, it also allows you to copy them and use when signing in to those account. This application is simple to use, includes a whole range of features and free for all category of persons.</p>
+					<p>Login Tracker: Is a Free web application that allows you to secure all login details of accounts
+						you create on the internet in one place, it also allows you to copy them and use when signing in
+						to those account. This application is simple to use, includes a whole range of features and free
+						for all category of persons.</p>
 
 					<div class="OthApps display">
 						<!-- <a href="#Contact">Contact Us </a> -->
@@ -561,6 +591,7 @@
 	<script src="../js/js.js"></script>
 	<script src="../js/profile.js"></script>
 	<script src="../Draggable Slider Tabs/script.js"></script>
+	<script src="../js/account.js"></script>
 	<script>
 		document.getElementById("nameResult").innerHTML = localStorage.getItem("nameValue");
 	</script>

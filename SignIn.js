@@ -65,7 +65,7 @@ newTodoForm.addEventListener("submit", (e) => {
     form.style.display = "flex";
     createLogin.style.display = "none";
   
-    alert(fint)
+    // alert(fint)
   }
   Logins.push(Login);
 
@@ -154,6 +154,21 @@ setInterval(() => {
   }
   
 });
+
+
+let backtoLogin = document.querySelector("#backtoLogin")
+backtoLogin.addEventListener("click", () =>{
+  createlogin.style.display = "flex";
+  form.style.display = "none";
+  localStorage.removeItem("Logins")
+})
+
+let backtosign = document.querySelector("#backtosign")
+backtosign.addEventListener("click", () =>{
+  recoverLogin.style.display = "none";
+  form.style.display = "flex";
+})
+
 
 let Recorver = document.querySelector("#Recorver")
 Recorver.addEventListener("click", () =>{
